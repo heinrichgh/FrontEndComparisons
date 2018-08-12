@@ -10,11 +10,11 @@
 
 # Frameworks
 - ReactJS
-- Preact
 - VueJS
 - Ember
 - Angular
 - Elm
+- Preact
 
 # Benchmarks
 
