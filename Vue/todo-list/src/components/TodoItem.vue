@@ -1,5 +1,5 @@
 <template>
-    <li class="list-group-item" v-bind:class="{ 'list-group-item-success': todo.done }">
+    <div class="list-group-item" v-bind:class="{ 'list-group-item-success': todo.done }">
         <div>
             {{ todo.label }}
 
@@ -12,7 +12,7 @@
         <div class="text-muted small">
             {{ todo.dateAdded.toLocaleDateString(language) }} {{ todo.dateAdded.getHours() }}:{{ todo.dateAdded.getMinutes() }}
         </div>
-    </li>
+    </div>
 </template>
 
 <script>

@@ -14,6 +14,7 @@
 - Ember
 - Angular
 - Elm
+- Polymer
 - Preact
 
 # Benchmarks
@@ -25,8 +26,12 @@
 
 ## Subjective
 - Ease of use
+    - React: Felt much more like 'Plain Javascript'
+    - Vue: Easy once read up a bit more, feels a bit more abstracted due to custom attributes and conventions
 - Community
 - Documentation
+    - React: Good
+    - Vue: Good
 - 'Cleanliness'
 
 # Next steps

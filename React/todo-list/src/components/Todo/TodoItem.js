@@ -4,7 +4,7 @@ class TodoItem extends Component {
 
     render() {
         return (
-            <li className={"list-group-item " + (this.props.item.done ? "list-group-item-success" : "")}>
+            <div className={"list-group-item " + (this.props.item.done ? "list-group-item-success" : "")}>
                 <div>
                     {this.props.item.label}
 
@@ -17,7 +17,7 @@ class TodoItem extends Component {
                 <div className="text-muted small">
                     {this.props.item.dateAdded.toLocaleDateString(window.navigator.language)} {this.props.item.dateAdded.getHours()}:{this.props.item.dateAdded.getMinutes()}
                 </div>
-            </li>
+            </div>
         )
     }
 }
