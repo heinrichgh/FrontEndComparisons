@@ -1,0 +1,14 @@
+<div>
+<div>
+  {{item.label}}
+
+  <div class="float-right">
+    <button class="btn btn-sm btn-outline-success" (click)="done()" *ngIf="!item.done">Done</button>
+    &nbsp;
+    <button class="btn btn-sm btn-outline-danger" (click)="remove()">&times;</button>
+  </div>
+</div>
+<div class="text-muted small">
+  {{item.dateTimeString()}}
+</div>
+</div>

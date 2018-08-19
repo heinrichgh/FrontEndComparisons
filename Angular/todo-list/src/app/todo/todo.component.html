@@ -1,0 +1,19 @@
+<div>
+  <h1>Todo List</h1>
+  <div class="input-group mb-3">
+    <input type="text"
+           class="form-control"
+           placeholder="Todo Item"
+           aria-label="Todo Item"
+           aria-describedby="basic-addon2"
+           [(ngModel)]="newItemValue"
+           (keyup.enter)="addItem()"
+    />
+    <div class="input-group-append">
+      <button class="btn btn-outline-primary" type="button" (click)="addItem()">Button</button>
+    </div>
+  </div>
+  <div >
+    <app-todo-item *ngFor="let item of items" [item]="item" [onDone]="markDone" [onRemove]="removeItem"></app-todo-item>
+  </div>
+</div>
