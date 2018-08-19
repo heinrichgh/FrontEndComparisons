@@ -1,17 +1,27 @@
 <h1>Todo List</h1>
 <div class="input-group mb-3">
-  <input type="text"
-         class="form-control"
-         placeholder="Todo Item"
-         aria-label="Todo Item"
-         aria-describedby="basic-addon2"
-  />
+  <!--<input type="text"-->
+         <!--class="form-control"-->
+         <!--placeholder="Todo Item"-->
+         <!--aria-label="Todo Item"-->
+         <!--aria-describedby="basic-addon2"-->
+  <!--/>-->
+  {{input value=newItemValue
+          type="text"
+          class="form-control"
+          placeholder="Todo Item"
+          aria-label="Todo Item"
+          aria-describedby="basic-addon2"}}
   <div class="input-group-append">
-    <button class="btn btn-outline-primary" type="button" >Button</button>
+    <button class="btn btn-outline-primary" type="button" {{action "addItem"}} >Button</button>
   </div>
 </div>
 <div>
   {{#each items as |item|}}
-    {{todo-list-item item=item}}
+    {{todo-list-item
+      item=item
+      remove-action=(action "removeItem")
+      complete-action=(action "completeItem")
+    }}
   {{/each}}
 </div>

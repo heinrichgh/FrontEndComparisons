@@ -6,6 +6,16 @@ export default Component.extend({
   classNameBindings: ['isDone'],
   isDone: computed('item.done', function() {
     return this.get('item.done') ? 'list-group-item-success' : '';
-  })
+  }),
+  actions: {
+    remove(id) {
+      this.get('remove-action')(id)
+    },
+
+    done(id) {
+      this.get('complete-action')(id)
+    }
+  }
+
 
 });

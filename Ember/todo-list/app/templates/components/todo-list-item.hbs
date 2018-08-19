@@ -3,10 +3,10 @@
 
   <div class="float-right">
     {{#unless item.done}}
-    <button class="btn btn-sm btn-outline-success">Done</button>
+    <button class="btn btn-sm btn-outline-success" {{action "done" item.id }}>Done</button>
     {{/unless}}
     &nbsp;
-    <button class="btn btn-sm btn-outline-danger">&times;</button>
+    <button class="btn btn-sm btn-outline-danger" {{action "remove" item.id }}>&times;</button>
   </div>
 </div>
 <div class="text-muted small">

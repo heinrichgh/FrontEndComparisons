@@ -1,14 +1,8 @@
 import Route from '@ember/routing/route';
-import EmberObject, {computed} from '@ember/object';
+import EmberObject from '@ember/object';
 
 const Item = EmberObject.extend({
-  label: "",
-  done: true,
-  dateAdded: null,
 
-  dateTimeString: computed('dateAdded', function () {
-    return `${this.dateAdded.toLocaleDateString(window.navigator.language)} ${this.dateAdded.getHours()}:${this.dateAdded.getMinutes()}`;
-  })
 });
 
 
@@ -25,6 +19,6 @@ for (let i = 0; i < 10; i++) {
 
 export default Route.extend({
   model() {
-    return todoList;
+    return 'todo-item';
   }
 });
