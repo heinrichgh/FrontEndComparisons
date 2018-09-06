@@ -1,0 +1,1 @@
+Run `elm make src/Main.elm --output=Main.js` in cli to update changes
